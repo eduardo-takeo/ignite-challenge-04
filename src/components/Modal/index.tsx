@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode } from "react";
 import ReactModal from "react-modal";
 
 interface ModalProps {
@@ -8,20 +8,11 @@ interface ModalProps {
 }
 
 export function Modal({ isOpen, setIsOpen, children }: ModalProps) {
-  const [modalStatus, setModalStatus] = useState(isOpen);
-
-  //TODO: Rever
-  // useEffect(() => {
-  //   if (prevProps.isOpen !== isOpen) {
-  //     setModalStatus(isOpen)
-  //   }
-  // })
-
   return (
     <ReactModal
       shouldCloseOnOverlayClick={!false}
       onRequestClose={setIsOpen}
-      isOpen={modalStatus}
+      isOpen={isOpen}
       ariaHideApp={false}
       style={{
         content: {
