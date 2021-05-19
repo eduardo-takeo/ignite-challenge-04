@@ -1,14 +1,16 @@
-import { useEffect, useRef, useState, useCallback } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 
 import { useField } from "@unform/core";
 
 import { Container } from "./styles";
-import { IconType } from "react-icons";
 
+interface SVGIconProps {
+  size: number;
+}
 interface InputProps {
   name: string;
   placeholder?: string;
-  icon?: IconType; //TODO: Rever
+  icon?: React.ComponentType<SVGIconProps>;
 }
 
 export function Input({ name, placeholder, icon: Icon, ...rest }: InputProps) {
