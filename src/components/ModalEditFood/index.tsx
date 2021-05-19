@@ -21,8 +21,7 @@ export function ModalEditFood({
 }: ModalEditFoodProps) {
   const formRef = useRef(null);
 
-  async function handleSubmit(data: any) {
-    //TODO: Rever tipo
+  async function handleSubmit(data: Food) {
     handleUpdateFood(data);
     setIsOpen();
   }

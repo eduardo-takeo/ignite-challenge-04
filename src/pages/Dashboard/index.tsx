@@ -10,7 +10,7 @@ import { Food } from "../../types";
 
 export function Dashboard() {
   const [foods, setFoods] = useState<Food[]>([]);
-  const [editingFood, setEditingFood] = useState<Food>({} as Food); //TODO: Type state
+  const [editingFood, setEditingFood] = useState<Food>({} as Food);
   const [modalOpen, setModalOpen] = useState<boolean>(false);
   const [editModalOpen, setEditModalOpen] = useState<boolean>(false);
 

@@ -19,8 +19,7 @@ export function ModalAddFood({
 }: ModalAddFoodProps) {
   const formRef = useRef(null);
 
-  async function handleSubmit(data: any) {
-    //TODO: Verificar tipo
+  async function handleSubmit(data: Food) {
     handleAddFood(data);
     setIsOpen();
   }
